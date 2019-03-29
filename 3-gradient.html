@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .line-gradient {
+        height: 200px;
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    .radical-gradient{
+        height: 200px;
+        background: radial-gradient(white, #FFA9A1);
+    }
+    .ball{
+
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: radial-gradient(circle at 65% 15%, aqua, darkblue);
+
+    }
+    .wrap {
+        height: 200px;
+        padding: 50px 0;
+        background: #cccccc;
+    }
+    .button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: radial-gradient(farthest-side ellipse at top left, white, #aaaaaa);
+        box-shadow: 5px 10px 20px rgba(0,0,0,0.3), -5px -10px 20px rgba(255,255,255,0.5);
+    }
+        .repeating{
+        height: 200px;
+        background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+    }
+</style>
+<!--Линейный градиент-->
+<div class="line-gradient"></div>
+<!--Радиальный градиент-->
+<div class="radical-gradient"></div>
+<!--Мяч-->
+<div class="ball"></div>
+<!--Кнопка-->
+<div class="wrap"><div class="button"></div></div>
+<!--Повтор градиента-->
+<div class="repeating"></div>
+</body>
+</html>

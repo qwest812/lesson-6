@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .shadow{
+        height: 300px;
+        width: 600px;
+        margin: 100px 0;
+        border: 1px solid red;
+        -webkit-box-shadow: 15px 40px 5px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 15px 40px 5px -4px rgba(0,0,0,0.75);
+        box-shadow: 15px 40px 5px -4px rgba(0,0,0,0.75);
+    }
+
+    .gradient{
+        height: 100px;
+        width: 700px;
+        background: rgb(191,210,85); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(191,210,85,1) 0%, rgba(31,58,137,1) 33%, rgba(114,0,84,1) 65%, rgba(158,203,45,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(191,210,85,1) 0%,rgba(31,58,137,1) 33%,rgba(114,0,84,1) 65%,rgba(158,203,45,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(191,210,85,1) 0%,rgba(31,58,137,1) 33%,rgba(114,0,84,1) 65%,rgba(158,203,45,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .animate{
+        width: 80%;
+        margin: 50px auto;
+        background-color: #468be1;
+        height: 100px;
+    }
+    @keyframes example{
+        to{ background-color: yellow;}
+    }
+    .animate:hover{
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
+    }
+
+    @keyframes text2 {
+        to{
+            margin-left: 0;
+        }
+    }
+    .text{
+        width: 3000px;
+        animation-name: text2;
+        margin-left: 400px;
+        animation-duration: 4s;
+    }
+</style>
+<body>
+<div class="shadow">
+
+</div>
+
+<div class="gradient"></div>
+<div class="animate"></div>
+<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque doloremque doloribus laudantium nobis numquam soluta voluptate. Accusantium aliquid explicabo harum nam neque, nobis, odio quas quibusdam repudiandae suscipit tempore.</div>
+</body>
+</html>

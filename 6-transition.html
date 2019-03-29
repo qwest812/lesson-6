@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Playfair Display', serif;
+        line-height: 1;
+        color: #696150;
+    }
+    .wrap {max-width:660px;}
+    #go > kbd{display:block;margin-top:15px;}
+    p {
+        width: 125px;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 4px;
+        transition-duration: 3s;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 20px;
+        color: inherit;
+    }
+    .fa {padding-right: 10px;font-weight:bold}
+    .fa.fa-power-off {color:#FF9E3B}
+    .fa.fa-refresh {color:#B7CCCC}
+    p:nth-of-type(1) {
+        background: #F06E58;
+        /*Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует*/
+        transition-timing-function: linear;}
+    p:nth-of-type(2) {
+        background: #FEA45D;
+        /*Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце.*/
+        transition-timing-function: ease;}
+    p:nth-of-type(3) {
+        background: #FDF569;
+        /*Переход начинается медленно, а затем плавно ускоряется в конце.*/
+        transition-timing-function: ease-in;}
+    p:nth-of-type(4) {
+        background: #B9EA7B;
+        /*Переход начинается быстро и плавно замедляется в конце. Соответствует*/
+        transition-timing-function: ease-out;}
+    p:nth-of-type(5) {
+        background: #B9ECFE;
+        /*Переход медленно начинается и медленно заканчивается*/
+        transition-timing-function: ease-in-out;}
+    p:nth-of-type(6) {
+        background: #82DDFF;
+        /*Позволяет вручную установить значения от 0 до 1 для кривой ускорения.*/
+        /*http://roblaplaca.com/examples/bezierBuilder/*/
+        transition-timing-function: cubic-bezier(0.6, 0.1, 0.15, 0.8);}
+    #go:target p{transform:translateX(300px)}
+</style>
+<div class="wrap">
+    <a href="#go"><span class="fa fa-power-off"></span>Запустить</a>
+    <a href="#reset"><span class="fa fa-refresh"></span>Назад</a>
+    <div id="go">
+        <kbd>transition-timing-function</kbd>
+        <p><kbd>linear</kbd></p>
+        <p><kbd>ease</kbd></p>
+        <p><kbd>ease-in</kbd></p>
+        <p><kbd>ease-out</kbd></p>
+        <p><kbd>ease-in-out</kbd></p>
+        <p><kbd>cubic-bezier</kbd></p>
+    </div>
+</div>
+</body>
+</html>

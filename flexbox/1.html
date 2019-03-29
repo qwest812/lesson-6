@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    /*https://tproger.ru/translations/how-css-flexbox-works/*/
+
+
+    .el1{
+        width: 20%;
+        height: 40px;
+        background-color: red;
+    }
+    .el2{
+        width: 20%;
+        height: 40px;
+        background-color: blue;
+    }
+    .el3{
+        width: 20%;
+        height: 40px;
+        background-color: green;
+    }
+    .el4{
+        width: 20%;
+        height: 40px;
+        background-color: orange;
+    }
+    .flex{
+        /*display: block;*/
+        animation-name: flex;
+        animation-duration: 2s;
+    }
+    @keyframes flex{
+        from{
+            display: block;
+        }
+        to{
+            display: flex;
+        }
+    }
+</style>
+<body>
+<div class="flex"><div class="el1"></div>
+<div class="el2"></div>
+<div class="el3"></div>
+<div class="el4"></div></div>
+</body>
+</html>
